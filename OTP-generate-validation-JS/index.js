@@ -17,8 +17,6 @@ function handleInput() {
     //compare otp
     givenOTP += value;
     const result = document.getElementById("result");
-    console.log("otp: ", otp); //
-    console.log("givenOTP: ", givenOTP); //
     if (givenOTP.length == 4) {
       if (otp === parseInt(givenOTP)) {
         clearInterval(intervalId);
@@ -58,6 +56,8 @@ function handleReset() {
   //clear result in DOM
   const result = document.getElementById("result");
   result.innerText = "";
+  //move focus to first input
+  inputList.children[0].focus();
 }
 
 function handleTimer() {
@@ -69,7 +69,7 @@ function handleTimer() {
   intervalId = setInterval(() => {
     //update timer in DOM
     timeRemaining.innerText = time;
-    console.log("Time ", time);
+    // console.log("Time ", time);
     time--;
     //if time is up generate new otp
     if (time < 0) {
