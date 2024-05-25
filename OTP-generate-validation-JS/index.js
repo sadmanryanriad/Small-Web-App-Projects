@@ -10,4 +10,13 @@ function handleInput() {
     console.log(e.target.value);
   });
 }
+
+function generateOTP(){
+  const otp = Math.floor(1000 + Math.random() * 9000);
+  const generatedOTP = document.getElementById("generated-otp");
+  generatedOTP.innerText = otp;
+
+}
+
+generateOTP();
 handleInput();
