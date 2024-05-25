@@ -3,12 +3,15 @@ let otp = "";
 let givenOTP = "";
 
 function handleInput() {
-  const inputList = document.getElementById("input-list");
+  const inputList = document.getElementById("input-list");//return reference, not value
   inputList.addEventListener("input", (e) => {
-    value = e.target.value;
+    value = e.target.value;//returns value, not reference
     //check if number or not
     if (isNaN(value)) {
-      value = "";
+      //why I did not use value = ""; ?
+      //because In JavaScript, when you assign a value to a variable, the variable stores a copy of that value, not a reference to the original value. This means that changing the value of the variable does not affect the original value or the element from which it was copied.
+      //https://chatgpt.com/share/38656518-b34b-4cc9-bcc8-7b068cb80155
+      e.target.value = ""; 
       return;
     }
     //move cursor to next input field
