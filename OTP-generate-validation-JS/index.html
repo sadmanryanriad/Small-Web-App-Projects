@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OTP generation and validation</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./index.js" defer></script>
 </head>
 <body>
     <h1 class="text-2xl md:text-5xl text-center">Enter OTP</h1>
-    <div class="input-list mt-12 flex justify-center gap-5">
+    <div id="input-list" class="mt-12 flex justify-center gap-5">
         <input maxlength="1" class="border-2 border-gray-500 rounded-md w-[50px] h-[40px] shadow-2xl text-2xl text-center font-semibold" type="text">
         <input maxlength="1" class="border-2 border-gray-500 rounded-md w-[50px] h-[40px] shadow-2xl text-2xl text-center font-semibold" type="text">
         <input maxlength="1" class="border-2 border-gray-500 rounded-md w-[50px] h-[40px] shadow-2xl text-2xl text-center font-semibold" type="text">
@@ -19,6 +20,5 @@
     <p id="result" class="text-2xl text-center mt-10">Result</p>
 
 
-    <script src="./index.js"></script>
 </body>
 </html>
