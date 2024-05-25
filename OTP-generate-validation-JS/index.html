@@ -16,8 +16,9 @@
         <input maxlength="1" class="border-2 border-gray-500 rounded-md w-[50px] h-[40px] shadow-2xl text-2xl text-center font-semibold" type="text">
     </div>
     <p class="text-4xl font-semibold text-center mt-10">OTP: <span id="generated-otp"></span></p>
-    <p id="time" class="text-2xl text-center mt-10">Time Remaining: </p>
-    <p id="result" class="text-2xl text-center mt-10">Result</p>
+    <p class="text-2xl text-center mt-10">Time Remaining: <span class="text-red-500 font-bold" id="time-remaining"></span> Sec</p>
+    <p id="result" class="text-2xl text-center my-10"></p>
+    <Button id="reset" onclick="handleReset()" class="py-2 px-5 bg-blue-400 rounded-sm text-white font-semibold text-2xl m-auto flex justify-center">Reset</Button>
 
 
 </body>
