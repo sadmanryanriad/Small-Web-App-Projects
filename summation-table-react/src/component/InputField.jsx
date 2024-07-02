@@ -1,7 +1,14 @@
 const InputField = ({ handleSubmit }) => {
+  function add(e) {
+    e.preventDefault();
+    const nameInput = document.querySelector('input[name="name"]');
+    nameInput.focus();
+    console.log(nameInput);
+    handleSubmit(e);
+  }
   return (
     <>
-      <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3">
+      <form onSubmit={add} className="flex flex-col md:flex-row gap-3">
         <label className="input input-bordered flex items-center gap-2">
           <span className="text-gray-400">Name: </span>
           <input
