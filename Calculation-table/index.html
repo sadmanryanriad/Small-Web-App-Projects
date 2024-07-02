@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC money savings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        table {
+            border-radius: 1rem;
+            overflow: hidden;
+            font-size: 1.5rem;
+            font-weight: 600;
+            box-shadow: 2px 2px 2px gray;
+            margin-bottom: 2rem;
+        }
+
+        table,
+        th,
+        td {
+            padding: 2rem;
+            border-collapse: collapse;
+        }
+
+        td:nth-child(1) {
+            text-align: left;
+        }
+
+        td:nth-child(2) {
+            text-align: right;
+        }
+
+        .table_heading {
+            background-color: lightgray !important;
+        }
+
+        tr:hover {
+            background-color: coral;
+        }
+
+        button {
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="moneyTable">
+        <tr class="table_heading">
+            <th>Source</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td>Intern</td>
+            <td>24,000</td>
+        </tr>
+        <tr>
+            <td>Savings</td>
+            <td>20,000</td>
+        </tr>
+        <tr>
+            <td>VU fee</td>
+            <td>5,000</td>
+        </tr>
+        <tr>
+            <td>Mitu</td>
+            <td>10,000</td>
+        </tr>
+        <tr class="total">
+            <td>Total</td>
+            <td id="totalAmount">sum</td>
+        </tr>
+    </table>
+    <button id="saveAsPdf">Save as PDF</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.22/jspdf.plugin.autotable.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
