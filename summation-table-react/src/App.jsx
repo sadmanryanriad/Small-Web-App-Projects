@@ -1,11 +1,12 @@
 import InputField from "./component/InputField";
 import Table from "./table/Table";
-import { useState, useEffect } from "react";
+import GeneratePdf from "./hooks/GeneratePdf";
+import { useState } from "react";
+import GeneratePng from "./hooks/GeneratePng";
 
 // const fetchedData = {
 //   intern: 24000,
 //   savings: 20000,
-//   "VU fee": 5000,
 //   mitu: 10000,
 // };
 
@@ -29,6 +30,8 @@ export default function App() {
     <div className="max-w-5xl m-auto">
       <Table data={data}></Table>
       <InputField handleSubmit={handleSubmit}></InputField>
+      <GeneratePdf rootElementId="moneyTable" downloadFileName="table"></GeneratePdf>
+      <GeneratePng rootElementId="moneyTable" downloadFileName="table"></GeneratePng>
     </div>
   );
 }

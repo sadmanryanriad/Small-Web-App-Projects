@@ -3,7 +3,7 @@ const InputField = ({ handleSubmit }) => {
     e.preventDefault();
     const nameInput = document.querySelector('input[name="name"]');
     nameInput.focus();
-    console.log(nameInput);
+    // console.log(nameInput);
     handleSubmit(e);
   }
   return (
